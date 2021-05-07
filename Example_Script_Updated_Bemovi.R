@@ -94,6 +94,11 @@ filter_median_step_length <- 3
 #Check if all tools are installed, and if not install them
 check_tools_folder(tools.path)
 
+#Ensure computer has permission to run bftools
+system(paste0("chmod a+x ", tools.path, "bftools/bf.sh"))
+system(paste0("chmod a+x ", tools.path, "bftools/bfconvert"))
+system(paste0("chmod a+x ", tools.path, "bftools/showinf"))
+
 # Convert files to compressed avi (takes approx. 2.25 minutes per video)
 convert_to_avi(to.data, raw.video.folder, raw.avi.folder, metadata.folder, tools.path, fps, video.format)
 
