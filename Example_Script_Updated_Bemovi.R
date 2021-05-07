@@ -122,7 +122,7 @@ morph_mvt <- summarize_trajectories(trajectory.data.filtered, calculate.median=F
 summarize_populations(trajectory.data.filtered, morph_mvt, write=T, to.data, merged.data.folder, video.description.folder, video.description.file, total_frames)
 
 # create overlays for validation
-create.subtitle.overlays(to.data, traj.data=trajectory.data.filtered, raw.avi.folder, temp.overlay.folder, overlay.folder, fps, vid.length=total_frames/fps, width, height)
+create.subtitle.overlays(to.data, traj.data=trajectory.data.filtered, raw.avi.folder, temp.overlay.folder, overlay.folder, fps, vid.length=total_frames/fps, width, height, tools.path)
   
 ########################################################################
 # some cleaning up
