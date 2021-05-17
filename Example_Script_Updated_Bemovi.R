@@ -95,6 +95,10 @@ filter_min_duration <- 1
 filter_detection_freq <- 0.1
 filter_median_step_length <- 3
 
+
+######################################################################
+# VIDEO ANALYSIS
+
 #Check if all tools are installed, and if not install them
 check_tools_folder(tools.path)
 
