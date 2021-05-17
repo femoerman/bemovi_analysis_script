@@ -105,11 +105,11 @@ convert_to_avi(to.data, raw.video.folder, raw.avi.folder, metadata.folder, tools
 # identify particles
 locate_and_measure_particles(to.data, raw.avi.folder, particle.data.folder, difference.lag, min_size = particle_min_size, 
                              max_size = particle_max_size, thresholds=thresholds, tools.path, 
-                             memory=memory.alloc, memory.per.identifier=memory.per.identifier)
+                             memory=memory.alloc, memory.per.identifier=memory.per.identifier, max.cores=detectCores()-1)
 
 # link the particles
 link_particles(to.data, particle.data.folder, trajectory.data.folder, linkrange = trajectory_link_range, disp = trajectory_displacement, 
-               start_vid = 1, memory = memory.alloc, memory_per_linkerProcess = memory.per.linker, raw.avi.folder)
+               start_vid = 1, memory = memory.alloc, memory_per_linkerProcess = memory.per.linker, raw.avi.folder, max.cores=detectCores()-1)
 
 # merge info from description file and data
 merge_data(to.data, particle.data.folder, trajectory.data.folder, video.description.folder, video.description.file, merged.data.folder)
@@ -127,7 +127,7 @@ morph_mvt <- summarize_trajectories(trajectory.data.filtered, calculate.median=F
 summarize_populations(trajectory.data.filtered, morph_mvt, write=T, to.data, merged.data.folder, video.description.folder, video.description.file, total_frames)
 
 # create overlays for validation
-create.subtitle.overlays(to.data, traj.data=trajectory.data.filtered, raw.avi.folder, temp.overlay.folder, overlay.folder, fps, vid.length=total_frames/fps, width, height, tools.path)
+create.subtitle.overlays(to.data, traj.data=trajectory.data.filtered, raw.avi.folder, temp.overlay.folder, overlay.folder, fps, vid.length=total_frames/fps, width, height, tools.path, overlay.type="number")
   
 ########################################################################
 # some cleaning up
