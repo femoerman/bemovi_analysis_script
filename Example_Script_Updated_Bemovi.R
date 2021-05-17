@@ -41,6 +41,10 @@ overlay.folder <- "4_overlays/"
 merged.data.folder <- "5_merged_data/"
 ijmacs.folder <- "ijmacs/"
 
+
+######################################################################
+# VIDEO PARAMETERS
+
 # video frame rate (in frames per second)
 fps <- 25 #-needs_to_be_specified
 
