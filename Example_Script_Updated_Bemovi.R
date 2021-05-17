@@ -23,7 +23,7 @@ memory.per.linker <- 5000 #-needs_to_be_specified
 memory.per.overlay <- 5000 #-needs_to_be_specified
 
 # UNIX
-# set paths to ImageJ and particle linker standalone
+# set paths to tools folder and particle linker
 tools.path <- "/home/felix/bemovi_tools/" #-needs_to_be_specified
 to.particlelinker <- tools.path
 
