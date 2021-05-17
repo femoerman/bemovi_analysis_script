@@ -3,7 +3,7 @@
 #
 # Felix Moerman
 #
-# July 2018
+# May 2021
 ######################################################################
 rm(list=ls())
 setwd("/media/felix/Elements/TestData_Bemovi/") #-needs_to_be_specified
