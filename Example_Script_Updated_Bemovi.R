@@ -95,6 +95,14 @@ filter_min_duration <- 1
 filter_detection_freq <- 0.1
 filter_median_step_length <- 3
 
+# TESTING
+
+# check file format and naming
+#check_video_file_names(to.data,raw.avi.folder,video.description.folder,video.description.file)
+
+# check whether the thresholds make sense (set "dark backgroud" and "red")
+#check_threshold_values(to.data, raw.avi.folder, ijmacs.folder, 0, difference.lag, thresholds, IJ.path, memory.alloc)
+
 
 ######################################################################
 # VIDEO ANALYSIS
