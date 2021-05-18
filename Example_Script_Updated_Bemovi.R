@@ -95,15 +95,6 @@ filter_min_duration <- 1
 filter_detection_freq <- 0.1
 filter_median_step_length <- 3
 
-# TESTING
-
-# check file format and naming
-#check_video_file_names(to.data,raw.avi.folder,video.description.folder,video.description.file)
-
-# check whether the thresholds make sense (set "dark backgroud" and "red")
-#check_threshold_values(to.data, raw.avi.folder, ijmacs.folder, 0, difference.lag, thresholds, IJ.path, memory.alloc)
-
-
 ######################################################################
 # VIDEO ANALYSIS
 
@@ -117,6 +108,15 @@ system(paste0("chmod a+x ", tools.path, "bftools/showinf"))
 
 # Convert files to compressed avi (takes approx. 2.25 minutes per video)
 convert_to_avi(to.data, raw.video.folder, raw.avi.folder, metadata.folder, tools.path, fps, video.format)
+
+
+# TESTING
+
+# check file format and naming
+#check_video_file_names(to.data,raw.avi.folder,video.description.folder,video.description.file)
+
+# check whether the thresholds make sense (set "dark backgroud" and "red")
+#check_threshold_values(to.data, raw.avi.folder, ijmacs.folder, 0, difference.lag, thresholds, paste0(tools.path, "/Fiji.app/ImageJ-linux64"), memory.alloc)
 
 # identify particles
 locate_and_measure_particles(to.data, raw.avi.folder, particle.data.folder, difference.lag, min_size = particle_min_size, 
